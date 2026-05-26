@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Neon Waves</title>
+    <style>
+        body { margin: 0; overflow: hidden; background: #000; }
+        canvas { display: block; position: absolute; top: 0; left: 0; }
+    </style>
+</head>
+<body>
+    <canvas id="waveCanvas"></canvas>
+    <script>
+        const canvas = document.getElementById('waveCanvas');
+        const ctx = canvas.getContext('2d');
+        let width = canvas.width = window.innerWidth;
+        let height = canvas.height = window.innerHeight;
+
+        window.addEventListener('resize', () => {
+            width = canvas.width = window.innerWidth;
+            height = canvas.height = window.innerHeight;
+        });
+
+        let step = 0;
+        const lines = [
+            { count: 4, speed: 0.01, amplitude: 60, color: 'rgba(99, 102, 241, 0.15)' },  // Индиго
+            { count: 3, speed: 0.02, amplitude: 40, color: 'rgba(168, 85, 247, 0.2)' },   // Фиолетовый
+            { count: 5, speed: 0.015, amplitude: 80, color: 'rgba(59, 130, 246, 0.1)' }   // Синий
+        ];
+
+        function animate() {
+            ctx.fillStyle = 'rgba(0, 0, 0, 0.08)'; // Эффект плавного затухания
+            ctx.fillRect(0, 0, width, height);
+
+            step += 0.01;
+
+            lines.forEach((line) => {
+                ctx.strokeStyle = line.color;
+                ctx.lineWidth = 2;
+                
+                for(let k = 0; k < line.count; k++) {
+                    ctx.beginPath();
+                    
+                    for (let x = 0; x < width; x += 10) {
+                        // Магическая формула наложения трех синусоид друг на друга
+                        const y = height / 2 + 
+                            Math.sin(x * 0.003 + step * line.speed * 100 + k * 0.5) * line.amplitude +
+                            Math.cos(x * 0.001 + step * 2 + k) * (line.amplitude * 0.5);
+                        
+                        if (x === 0) ctx.moveTo(x, y);
+                        else ctx.lineTo(x, y);
+                    }
+                    ctx.stroke();
+                }
+            });
+
+            requestAnimationFrame(animate);
+        }
+
+        animate();
+    </script>
+</body>
+</html>

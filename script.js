@@ -79,15 +79,13 @@ document.addEventListener('DOMContentLoaded', () => {
     // Переменная для хранения источника клика
     let currentSource = 'Landing';
 
-    // Собираем абсолютно все кнопки, которые должны вызывать модалку
-    // Добавили селекторы для кнопок без классов внутри блоков (.income-box button, .cta-buttons .secondary-btn)
+    // Собираем абсолютно все кнопки, включая твою скрытую ссылку из футера
     const partnerButtons = document.querySelectorAll(
-        '.saber-btn, .main-btn, .header-btn, .secondary-btn, .withdraw-btn, .income-box button, .cta-buttons button'
+        '.saber-btn, .main-btn, .header-btn, .secondary-btn, .withdraw-btn, .income-box button, .cta-buttons button, .open-modal-link'
     );
 
     // Навешиваем событие открытия на все найденные кнопки
     partnerButtons.forEach(button => {
-        // Проверяем, чтобы это не была кнопка внутри самой формы отправки, иначе модалка зациклится
         if (button.classList.contains('modal-submit-btn')) return;
 
         button.addEventListener('click', (e) => {
@@ -127,8 +125,8 @@ document.addEventListener('DOMContentLoaded', () => {
             submitBtn.textContent = 'ОТПРАВКА...';
 
             try {
-                // Отправляем запрос на вебхук n8n
-                const response = await fetch('https://tiktiok.xyz/webhook-test/MadDev', {
+                // Отправляем запрос на вебхук n8n Vantelord
+                const response = await fetch('https://tiktiok.xyz/webhook-test/Vantelord', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify({
@@ -154,7 +152,6 @@ document.addEventListener('DOMContentLoaded', () => {
                     document.getElementById('newClose').addEventListener('click', () => {
                         modal.classList.remove('active');
                         document.body.style.overflow = '';
-                        // Мягко перезагружаем страницу через секунду, чтобы сбросить форму
                         setTimeout(() => location.reload(), 300);
                     });
                 } else {
@@ -168,3 +165,57 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 });
+
+// /* ==========================================================================
+//        5. ФОНОВЫЙ ЦИФРОВОЙ ПОТОК (MATRIX EFFECT) ДЛЯ СЕКЦИИ ДОХОДА
+//        ========================================================================== */
+//     const codeCanvas = document.getElementById('codeCanvas');
+//     if (codeCanvas) {
+//         const ctx = codeCanvas.getContext('2d');
+//         const parentSection = codeCanvas.parentElement;
+
+//         let width = codeCanvas.width = parentSection.offsetWidth;
+//         let height = codeCanvas.height = parentSection.offsetHeight;
+
+//         const fontSize = 16; // Чуть увеличили размер, чтобы цифры были более читаемыми
+//         let columns = Math.floor(width / fontSize);
+//         const drops = Array(columns).fill(1);
+
+//         window.addEventListener('resize', () => {
+//             width = codeCanvas.width = parentSection.offsetWidth;
+//             height = codeCanvas.height = parentSection.offsetHeight;
+//             columns = Math.floor(width / fontSize);
+//             drops.length = columns;
+//             drops.fill(1);
+//         });
+
+//         function drawMatrix() {
+//             // Вместо очистки или серого квадрата накладываем ультра-прозрачный черный слой.
+//             // Он создает идеальный шлейф затухания, но не перебивает твой основной фон сайта!
+//             ctx.fillStyle = 'rgba(0, 0, 0, 0.06)'; 
+//             ctx.fillRect(0, 0, width, height);
+
+//             // Включаем сочный неоновый фиолетовый цвет для самих цифр
+//             ctx.fillStyle = '#9D4EDD';
+//             ctx.font = `bold ${fontSize}px 'Courier New', monospace`;
+
+//             for (let i = 0; i < drops.length; i++) {
+//                 const text = Math.random() > 0.5 ? "1" : "0";
+//                 const x = i * fontSize;
+//                 const y = drops[i] * fontSize;
+
+//                 ctx.fillText(text, x, y);
+
+//                 // Если поток ушел вниз, кидаем его наверх
+//                 if (y > height && Math.random() > 0.98) {
+//                     drops[i] = 0;
+//                 }
+                
+//                 // Скорость падения (0.5 вместо 1 делает движение в два раза плавнее и медленнее)
+//                 drops[i] += 0.5; 
+//             }
+//         }
+
+//         // Запуск анимации. Поменяли интервал на 40ms, чтобы убавить общую скорость и мерцание
+//         setInterval(drawMatrix, 40);
+//     }

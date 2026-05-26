@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>MadDev — Sales AI System</title>
+    <title>Vantelord — Sales AI System</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,7 +17,7 @@
     <header>
         <div class="logo">
             <a href="#" class="logo-link">
-                <img src="./img/MadDev logo.png" class="logo-image-tx" alt="MadDev Logo">
+                <img src="./img/VANTELORD logo.png" class="logo-image-tx" alt="VANTELORD logo">
             </a>
         </div>
 
@@ -45,14 +45,14 @@
     <section id="how-it-works" class="hero section">
         <div class="hero-left fade-up">
             <h1>
-                ЗАРАБАТЫВАЙ <br>
+                ЗАРАБАТЫВАТЬ <br>
                 НА ПРОДАЖЕ <br>
                 <span>AI-СИСТЕМ ДЛЯ БИЗНЕСА</span>
             </h1>
 
             <p>
                 Приводи клиентов — получай % с каждой оплаты.
-                Мы даем тебе систему, инструменты и поддержку от MadDev.
+                Мы даем тебе систему, инструменты и поддержку от Vantelord.
             </p>
 
             <div class="hero-features">
@@ -85,7 +85,7 @@
                 <div class="dashboard-header">
                     <div>
                         <h3>Панель агента</h3>
-                        <p>MadDev AI Sales System</p>
+                        <p>Vantelord AI Sales System</p>
                     </div>
                     <div class="dashboard-close">×</div>
                 </div>
@@ -135,7 +135,7 @@
     <section id="what-we-sell" class="section scroll-reveal">
         <div class="section-title">
             <h2>ЧТО ТЫ <span>ПРОДАЕШЬ?</span></h2>
-            <p>AI-система от MadDev, которая помогает бизнесу не терять клиентов</p>
+            <p>AI-система от Vantelord, которая помогает бизнесу не терять клиентов</p>
         </div>
 
         <div class="cards-grid">
@@ -167,18 +167,20 @@
         </div>
     </section>
 
-    <section id="earnings" class="section earnings-section scroll-reveal">
-        <div class="earnings-left">
+    <section id="earnings" class="section earnings-section scroll-reveal" style="position: relative; overflow: hidden;">
+        <!-- <canvas id="codeCanvas" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; pointer-events: none; opacity: 0.25;"></canvas> -->
+
+        <div class="earnings-left" style="position: relative; z-index: 2;">
             <h2>
                 СКОЛЬКО МОЖНО <br>
                 <span>ЗАРАБАТЫВАТЬ?</span>
             </h2>
             <p>Чем больше клиентов — тем выше твой доход.</p>
 
-            <div class="calculator-card">
+            <div class="calculator-card" id="calculator-card">
                 <div class="calculator-header">
                     <h3>Калькулятор дохода</h3>
-                    <p>MadDev Partner System</p>
+                    <p>Vantelord Partner System</p>
                 </div>
 
                 <div class="calc-body">
@@ -214,7 +216,7 @@
             </div>
         </div>
 
-        <div class="earnings-grid career-diagonal">
+        <div class="earnings-grid career-diagonal" style="position: relative; z-index: 2;">
             <div class="earning-card float-card diagonal-step step-low">
                 <div class="step-badge">Этап 1. Старт</div>
                 <h3>3 клиента</h3>
@@ -250,7 +252,7 @@
             </div>
             <div class="advantage">
                 <span class="icon">✔</span> 
-                <p>Высокий спрос на рынке решений MadDev</p>
+                <p>Высокий спрос на рынке решений Vantelord</p>
             </div>
             <div class="advantage">
                 <span class="icon">✔</span> 
@@ -289,14 +291,9 @@
                 <p>Умные подсказки и разборы возражений</p>
             </div>
             <div class="info-card float-card">
-                <div class="card-icon">📈</div>
-                <h3>CRM и аналитика</h3>
-                <p>Следи за своими клиентами онлайн</p>
-            </div>
-            <div class="info-card float-card">
-                <div class="card-icon">🎧</div>
+                <div class="card-icon">📦</div>
                 <h3>Поддержка</h3>
-                <p>Обучение от MadDev и помощь 24/7</p>
+                <p>Обучение от Vantelord и помощь 24/7</p>
             </div>
         </div>
     </section>
@@ -326,7 +323,7 @@
             
             <div class="modal-header">
                 <h3>СТАТЬ ПАРТНЕРОМ</h3>
-                <p>Стань партнером MadDev. Оставь контакты, и мы свяжемся с тобой в течение 5 минут!</p>
+                <p>Стань партнером Vantelord. Оставь контакты, и мы свяжемся с тобой в течение 5 минут!</p>
             </div>
 
             <form class="modal-form" id="partnerForm">
@@ -351,7 +348,7 @@
         <div class="footer-container">
             
             <div class="footer-brand">
-                <a href="#" class="footer-logo">MADDEV</a>
+                <a href="#" class="footer-logo">VANTELORD</a>
                 <p class="footer-description">
                     Умные автоматизации и AI-решения для масштабирования твоего бизнеса. Зарабатывай на технологиях будущего уже сегодня.
                 </p>
@@ -363,15 +360,13 @@
                     <ul>
                         <li><a href="#">Главная</a></li>
                         <li><a href="#calculator-card">Калькулятор</a></li>
-                        <li><a href="#cta-block">Стать партнером</a></li>
+                        <li><a href="#cta-block" class="open-modal-link">Стать партнером</a></li>
                     </ul>
                 </div>
                 <div class="footer-links-column">
                     <h4>Поддержка</h4>
                     <ul>
-                        <!-- <li><a href="#">Документация</a></li> -->
-                        <li><a href="https://t.me/MadDevvBot">Telegram Бот</a></li>
-                        <!-- <li><a href="#">Чат сообщества</a></li> -->
+                        <li><a href="https://t.me/VantelordBot">Telegram Бот</a></li>
                     </ul>
                 </div>
             </div>
@@ -379,11 +374,7 @@
         </div>
 
         <div class="footer-bottom">
-            <p>&copy; 2026 MadDev. Все права защищены.</p>
-            <!-- <div class="footer-legal">
-                <a href="#">Terms of Service</a>
-                <a href="#">Privacy Policy</a>
-            </div> -->
+            <p>&copy; 2026 Vantelord. Все права защищены.</p>
         </div>
     </footer>
 
