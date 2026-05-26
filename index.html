@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MadDev — Sales AI System</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="animated-bg"></div>
+    <div class="noise"></div>
+
+    <header>
+        <div class="logo">
+            <a href="#" class="logo-link">
+                <img src="./img/MadDev logo.png" class="logo-image-tx" alt="MadDev Logo">
+            </a>
+        </div>
+
+        <nav class="mobile-nav">
+            <a href="#what-we-sell">Что продаем ?</a>
+            <a href="#how-it-works">Как это работает ?</a>
+            <a href="#earnings">Заработок</a>
+            <a href="#what-you-get">Что получаешь ?</a>
+            <a href="#cta-block">FAQ</a>
+        </nav>
+
+        <div class="header-actions">
+            <button class="header-btn saber-btn">
+                Стать партнером
+            </button>
+            
+            <div class="burger-menu" id="burgerToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <section id="how-it-works" class="hero section">
+        <div class="hero-left fade-up">
+            <h1>
+                ЗАРАБАТЫВАЙ <br>
+                НА ПРОДАЖЕ <br>
+                <span>AI-СИСТЕМ ДЛЯ БИЗНЕСА</span>
+            </h1>
+
+            <p>
+                Приводи клиентов — получай % с каждой оплаты.
+                Мы даем тебе систему, инструменты и поддержку от MadDev.
+            </p>
+
+            <div class="hero-features">
+                <div class="feature-card float-card">
+                    <div class="feature-icon">✦</div>
+                    <span>AI помогает продавать</span>
+                </div>
+                <div class="feature-card float-card">
+                    <div class="feature-icon">↗</div>
+                    <span>Высокий чек и %</span>
+                </div>
+                <div class="feature-card float-card">
+                    <div class="feature-icon">◔</div>
+                    <span>Гибкий график</span>
+                </div>
+            </div>
+
+            <div class="hero-buttons">
+                <button class="main-btn saber-btn">
+                    СТАТЬ ПАРТНЕРОМ
+                </button>
+                <button class="secondary-btn saber-btn" data-source="Демо">
+                    ПОСМОТРЕТЬ ДЕМО
+                </button>
+            </div>
+        </div>
+
+        <div class="hero-right fade-up-delay">
+            <div class="dashboard-card float-dashboard">
+                <div class="dashboard-header">
+                    <div>
+                        <h3>Панель агента</h3>
+                        <p>MadDev AI Sales System</p>
+                    </div>
+                    <div class="dashboard-close">×</div>
+                </div>
+
+                <div class="stats-grid">
+                    <div class="stat-box glow-box">
+                        <h4 class="count-num" data-target="28">28</h4>
+                        <p>Мои клиенты</p>
+                    </div>
+                    <div class="stat-box glow-box">
+                        <h4>$<span class="count-num" data-target="2450">2450</span></h4>
+                        <p>Выплаты</p>
+                    </div>
+                    <div class="stat-box glow-box">
+                        <h4 class="count-num" data-target="37">37</h4>
+                        <p>Конверсия</p>
+                    </div>
+                </div>
+
+                <div class="transactions">
+                    <div class="transaction">
+                        <span>Цветочный магазин</span>
+                        <b>$1000</b>
+                    </div>
+                    <div class="transaction">
+                        <span>Кафе Лаванда</span>
+                        <b>$500</b>
+                    </div>
+                    <div class="transaction">
+                        <span>Студия красоты</span>
+                        <b>$500</b>
+                    </div>
+                    <div class="transaction">
+                        <span>Интернет-магазин</span>
+                        <b>$450</b>
+                    </div>
+                </div>
+
+                <div class="income-box saber-line">
+                    <span>Ваш доход: $2,450</span>
+                    <button>Вывести</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="what-we-sell" class="section scroll-reveal">
+        <div class="section-title">
+            <h2>ЧТО ТЫ <span>ПРОДАЕШЬ?</span></h2>
+            <p>AI-система от MadDev, которая помогает бизнесу не терять клиентов</p>
+        </div>
+
+        <div class="cards-grid">
+            <div class="info-card float-card">
+                <div class="card-icon">🛍</div>
+                <h3>Виртуальная витрина</h3>
+                <p>Каталог товаров, оформление заказов</p>
+            </div>
+            <div class="info-card float-card">
+                <div class="card-icon">💬</div>
+                <h3>AI-ассистент</h3>
+                <p>Отвечает клиентам 24/7</p>
+            </div>
+            <div class="info-card float-card">
+                <div class="card-icon">📊</div>
+                <h3>Автоматизация</h3>
+                <p>Быстрая обработка заявок</p>
+            </div>
+            <div class="info-card float-card">
+                <div class="card-icon">📦</div>
+                <h3>Складской учет</h3>
+                <p>Остатки онлайн и аналитика</p>
+            </div>
+            <div class="info-card float-card">
+                <div class="card-icon">🚀</div>
+                <h3>Готовое решение</h3>
+                <p>Быстрый запуск за 1 день</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="earnings" class="section earnings-section scroll-reveal">
+        <div class="earnings-left">
+            <h2>
+                СКОЛЬКО МОЖНО <br>
+                <span>ЗАРАБАТЫВАТЬ?</span>
+            </h2>
+            <p>Чем больше клиентов — тем выше твой доход.</p>
+
+            <div class="calculator-card">
+                <div class="calculator-header">
+                    <h3>Калькулятор дохода</h3>
+                    <p>MadDev Partner System</p>
+                </div>
+
+                <div class="calc-body">
+                    <div class="input-group">
+                        <div class="input-labels">
+                            <span>Приведено клиентов:</span>
+                            <span class="range-value" id="clients-val">5</span>
+                        </div>
+                        <input type="range" id="clients-slider" min="1" max="50" value="5" class="neon-slider">
+                    </div>
+
+                    <div class="input-group">
+                        <div class="input-labels">
+                            <span>Средний чек системы ($):</span>
+                            <span class="range-value" id="price-val">300</span>
+                        </div>
+                        <input type="range" id="price-slider" min="100" max="1000" step="50" value="300" class="neon-slider">
+                    </div>
+
+                    <div class="commission-badge">
+                        <span>Твоя партнерская комиссия:</span>
+                        <strong>30% с каждой оплаты</strong>
+                    </div>
+                </div>
+
+                <div class="income-footer">
+                    <div class="income-text">
+                        <p>Твой пассивный доход:</p>
+                        <span id="calc-total">$450 / мес</span>
+                    </div>
+                    <button class="withdraw-btn" data-source="Калькулятор">Забрать долю</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="earnings-grid career-diagonal">
+            <div class="earning-card float-card diagonal-step step-low">
+                <div class="step-badge">Этап 1. Старт</div>
+                <h3>3 клиента</h3>
+                <h2>$300</h2>
+                <p>в месяц</p>
+            </div>
+
+            <div class="earning-card float-card diagonal-step step-mid">
+                <div class="step-badge">Этап 2. Профи</div>
+                <h3>10 клиентов</h3>
+                <h2>$1,000</h2>
+                <p>в месяц</p>
+            </div>
+
+            <div class="earning-card active-earning float-card diagonal-step step-high">
+                <div class="step-badge">Этап 3. Топ</div>
+                <h3>30+ клиентов</h3>
+                <h2>$3,000+</h2>
+                <p>в месяц</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section advantages-section scroll-reveal">
+        <h2 class="section-title">
+            ПОЧЕМУ ПРОДАВАТЬ <span>ЛЕГКО?</span>
+        </h2>
+
+        <div class="advantages-grid">
+            <div class="advantage">
+                <span class="icon">✔</span> 
+                <p>AI и автоматизация — главный тренд</p>
+            </div>
+            <div class="advantage">
+                <span class="icon">✔</span> 
+                <p>Высокий спрос на рынке решений MadDev</p>
+            </div>
+            <div class="advantage">
+                <span class="icon">✔</span> 
+                <p>Поддержка нашей команды</p>
+            </div>
+            <div class="advantage">
+                <span class="icon">✔</span> 
+                <p>Понятная и прозрачная система</p>
+            </div>
+            <div class="advantage">
+                <span class="icon">✔</span> 
+                <p>Бизнес теряет клиентов каждый день</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="what-you-get" class="section scroll-reveal">
+        <div class="section-title">
+            <h2>ЧТО ТЫ ПОЛУЧАЕШЬ КАК <span>ПАРТНЕР?</span></h2>
+        </div>
+
+        <div class="cards-grid partner-grid">
+            <div class="info-card float-card">
+                <div class="card-icon">📄</div>
+                <h3>Скрипты продаж</h3>
+                <p>Все материалы для закрытия сделок</p>
+            </div>
+            <div class="info-card float-card">
+                <div class="card-icon">🖥</div>
+                <h3>Демо система</h3>
+                <p>Показывай клиентам софт в действии</p>
+            </div>
+            <div class="info-card float-card">
+                <div class="card-icon">🤖</div>
+                <h3>AI-помощник</h3>
+                <p>Умные подсказки и разборы возражений</p>
+            </div>
+            <div class="info-card float-card">
+                <div class="card-icon">📈</div>
+                <h3>CRM и аналитика</h3>
+                <p>Следи за своими клиентами онлайн</p>
+            </div>
+            <div class="info-card float-card">
+                <div class="card-icon">🎧</div>
+                <h3>Поддержка</h3>
+                <p>Обучение от MadDev и помощь 24/7</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="cta-block" class="cta-section section saber-line scroll-reveal">
+        <div>
+            <h2>
+                ГОТОВ ЗАРАБАТЫВАТЬ <br>
+                ВМЕСТЕ С <span>НАМИ?</span>
+            </h2>
+            <p>Заполни заявку и получи доступ к партнерке уже сегодня</p>
+        </div>
+
+        <div class="cta-buttons">
+            <button class="main-btn saber-btn">
+                СТАТЬ ПАРТНЕРОМ
+            </button>
+            <button class="secondary-btn">
+                ПОЛУЧИТЬ ДОСТУП
+            </button>
+        </div>
+    </section>
+
+    <div class="modal-overlay" id="partnerModal">
+        <div class="modal-card">
+            <div class="modal-close" id="closeModal">&times;</div>
+            
+            <div class="modal-header">
+                <h3>СТАТЬ ПАРТНЕРОМ</h3>
+                <p>Стань партнером MadDev. Оставь контакты, и мы свяжемся с тобой в течение 5 минут!</p>
+            </div>
+
+            <form class="modal-form" id="partnerForm">
+                <div class="form-group">
+                    <label for="userName">Имя</label>
+                    <input type="text" id="userName" placeholder="Как тебя зовут?" required autocomplete="off">
+                </div>
+                
+                <div class="form-group">
+                    <label for="userPhone">Номер телефона</label>
+                    <input type="tel" id="userPhone" placeholder="+380 (99) 000-00-00" required autocomplete="off">
+                </div>
+
+                <button type="submit" class="modal-submit-btn saber-btn">
+                    ОТПРАВИТЬ ЗАЯВКУ
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <footer class="main-footer">
+        <div class="footer-container">
+            
+            <div class="footer-brand">
+                <a href="#" class="footer-logo">MADDEV</a>
+                <p class="footer-description">
+                    Умные автоматизации и AI-решения для масштабирования твоего бизнеса. Зарабатывай на технологиях будущего уже сегодня.
+                </p>
+            </div>
+
+            <div class="footer-links-grid">
+                <div class="footer-links-column">
+                    <h4>Навигация</h4>
+                    <ul>
+                        <li><a href="#">Главная</a></li>
+                        <li><a href="#calculator-card">Калькулятор</a></li>
+                        <li><a href="#cta-block">Стать партнером</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links-column">
+                    <h4>Поддержка</h4>
+                    <ul>
+                        <!-- <li><a href="#">Документация</a></li> -->
+                        <li><a href="https://t.me/MadDevvBot">Telegram Бот</a></li>
+                        <!-- <li><a href="#">Чат сообщества</a></li> -->
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 MadDev. Все права защищены.</p>
+            <!-- <div class="footer-legal">
+                <a href="#">Terms of Service</a>
+                <a href="#">Privacy Policy</a>
+            </div> -->
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
